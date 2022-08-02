@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package carteiro;
+
+service Carteiro
+{
+	rpc messagesend (sentmessage) returns (responsemessage) {}
+	rpc transferfile (sendfile) returns (responsesendfile) {}
+}
+
+message datatransfer
+{
+	string data = 1;
+}
+
+message sentmessage {
+
+  string token = 1;
+  string mymessage = 2;
+  string time = 3;
+  repeated datatransfer data = 4;
+  string type = 5;
+}
+
+message responsemessage {
+  string messageresponse = 1;
+}
+
+message sendfile {
+   
+  string namefile = 1;
+  string token = 2;
+  repeated datatransfer data = 3;
+}
+
+message responsesendfile {
+ string messageresponsesnd = 1;
+}
+
