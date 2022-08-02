@@ -265,7 +265,7 @@ extern "C" void  RunServer(char *ipport) {
 int main(int argc, char** argv) {
 
   test_one();
-  RunServer("unix:/home/felipe/Documentos/TORSITES/var/person0.sock");
+  RunServer("your wonderfull ip listen here. ");
 
   return 0;
 }
