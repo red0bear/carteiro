@@ -265,6 +265,8 @@ extern "C" void  RunServer(char *ipport) {
 int main(int argc, char** argv) {
 
   test_one();
+  // local linux --> unix:/var/person0.sock
+  // local linux ip --> http://127.0.0.1:5555	
   RunServer("your wonderfull ip listen here. ");
 
   return 0;
